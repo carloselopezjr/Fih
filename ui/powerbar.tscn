@@ -1,0 +1,62 @@
+[gd_scene load_steps=10 format=3 uid="uid://ctc28vynjlot7"]
+
+[ext_resource type="Texture2D" uid="uid://b1wedg1sudhvb" path="res://ui/powerbar.png" id="1_s6462"]
+[ext_resource type="Script" uid="uid://deg2ybpl8n8su" path="res://ui/powerbar.gd" id="2_sjas1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_axprk"]
+atlas = ExtResource("1_s6462")
+region = Rect2(128, 192, 16, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6yajc"]
+atlas = ExtResource("1_s6462")
+region = Rect2(112, 192, 16, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gujia"]
+atlas = ExtResource("1_s6462")
+region = Rect2(96, 192, 16, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3bfw7"]
+atlas = ExtResource("1_s6462")
+region = Rect2(80, 192, 16, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wbtkj"]
+atlas = ExtResource("1_s6462")
+region = Rect2(64, 192, 16, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0bjar"]
+atlas = ExtResource("1_s6462")
+region = Rect2(48, 192, 16, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s8oyr"]
+animations = [{
+"frames": [{
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_axprk")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_6yajc")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_gujia")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_3bfw7")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_wbtkj")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_0bjar")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="powerbar" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(239, 89)
+sprite_frames = SubResource("SpriteFrames_s8oyr")
+frame_progress = 0.56769437
+script = ExtResource("2_sjas1")
