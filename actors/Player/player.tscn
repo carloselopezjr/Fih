@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://cem2fxmo5dy18"]
+[gd_scene load_steps=25 format=3 uid="uid://cem2fxmo5dy18"]
 
 [ext_resource type="Script" uid="uid://bt76b2j3l3tlo" path="res://actors/Player/player.gd" id="1_5l0d5"]
 [ext_resource type="Texture2D" uid="uid://cmdr73w45hqtm" path="res://actors/Player/Adrien.png" id="2_5fuia"]
@@ -186,16 +186,22 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5l0d5"]
+radius = 9.0
+height = 20.0
+
 [node name="CharacterBody2D" type="CharacterBody2D"]
+collision_mask = 2
 script = ExtResource("1_5l0d5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 rotation = 0.013497516
 sprite_frames = SubResource("SpriteFrames_hqn2o")
 animation = &"walk_up"
-frame_progress = 0.8320562
+frame_progress = 0.5350975
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_5l0d5")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 limit_top = 270
