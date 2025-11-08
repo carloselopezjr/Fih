@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqhbuuhp2esyf"]
+
+[ext_resource type="Texture2D" uid="uid://s2x5346j26cy" path="res://Objects/Foliage.png" id="1_2ftyr"]
+
+[node name="tree2" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(189, 95)
+texture = ExtResource("1_2ftyr")
+region_enabled = true
+region_rect = Rect2(48.000473, 8.157417, 46.265182, 99.18976)
