@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bc4jovo3ki03e"]
+
+[ext_resource type="Texture2D" uid="uid://calyjc3tkk4vl" path="res://Objects/rod.png" id="2_83rtc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jwd50"]
+size = Vector2(19, 17)
+
+[node name="Testtt" type="Area2D" groups=["interactable"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(245, 111)
+texture = ExtResource("2_83rtc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(243.5, 111.5)
+shape = SubResource("RectangleShape2D_jwd50")

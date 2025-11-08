@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dugnl5djsnixl"]
+[gd_scene load_steps=5 format=3 uid="uid://dugnl5djsnixl"]
 
 [ext_resource type="PackedScene" uid="uid://cem2fxmo5dy18" path="res://actors/Player/player.tscn" id="1_nefat"]
 [ext_resource type="TileSet" uid="uid://bap62vu8qo3u5" path="res://Tilesets/beach_tileset.tres" id="2_he6fm"]
 [ext_resource type="PackedScene" uid="uid://ysrsw4u0hjhk" path="res://devScene/PickupItem.tscn" id="3_nmnng"]
+[ext_resource type="PackedScene" uid="uid://qkaj4nyapwjp" path="res://devScene/FishingRodItem.tscn" id="4_egmi1"]
 
 [node name="Testing" type="Node2D"]
 
@@ -17,8 +18,5 @@ position = Vector2(-10, 30)
 [node name="PickupItem" parent="." instance=ExtResource("3_nmnng")]
 position = Vector2(-108, 23)
 
-[node name="PickupItem2" parent="." instance=ExtResource("3_nmnng")]
-position = Vector2(19, 79)
-
-[node name="PickupItem3" parent="." instance=ExtResource("3_nmnng")]
-item_id = "unco"
+[node name="rod" parent="." instance=ExtResource("4_egmi1")]
+position = Vector2(-230, 14)

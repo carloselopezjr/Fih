@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://qkaj4nyapwjp"]
+
+[ext_resource type="Script" uid="uid://411xmccif7wq" path="res://devScene/pick_up_item.gd" id="1_t0d81"]
+[ext_resource type="Texture2D" uid="uid://calyjc3tkk4vl" path="res://Objects/rod.png" id="2_t0d81"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1bcc4"]
+size = Vector2(22.625, 20.375)
+
+[node name="PickupItem" type="Area2D" groups=["interactable"]]
+script = ExtResource("1_t0d81")
+item_id = "fishing_rod"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(102, 112)
+texture = ExtResource("2_t0d81")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(102, 112)
+shape = SubResource("RectangleShape2D_1bcc4")
