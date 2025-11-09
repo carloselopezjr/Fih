@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://dk42655wfrl8t"]
+
+[ext_resource type="Texture2D" uid="uid://deo38nrq5fgmm" path="res://ui/qte/keys/L.png" id="1_0btib"]
+[ext_resource type="Script" uid="uid://8ip7ajfn1got" path="res://ui/qte/keys/keybutton.gd" id="2_mgabt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mgabt"]
+atlas = ExtResource("1_0btib")
+region = Rect2(0, 0, 17, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6q2hh"]
+atlas = ExtResource("1_0btib")
+region = Rect2(17, 0, 17, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ru4q4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mgabt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6q2hh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="FKey" type="AnimatedSprite2D"]
+position = Vector2(240, 135)
+sprite_frames = SubResource("SpriteFrames_ru4q4")
+script = ExtResource("2_mgabt")
+key_letter = "L"

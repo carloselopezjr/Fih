@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://br1xaptmhgblw"]
+
+[ext_resource type="Script" uid="uid://csv4huejmxmld" path="res://ui/qte/qte.gd" id="1_jhqge"]
+
+[node name="Qte" type="Node2D"]
+script = ExtResource("1_jhqge")
+
+[node name="KeyContainer" type="Node2D" parent="."]
+
+[node name="RoundTimer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[connection signal="timeout" from="RoundTimer" to="." method="_on_round_timer_timeout"]

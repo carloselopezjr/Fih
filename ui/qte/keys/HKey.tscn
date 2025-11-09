@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://dmstrg5wggoy7"]
+
+[ext_resource type="Texture2D" uid="uid://bkoe0sqcdyjih" path="res://ui/qte/keys/H.png" id="1_imeh4"]
+[ext_resource type="Script" uid="uid://8ip7ajfn1got" path="res://ui/qte/keys/keybutton.gd" id="2_vief5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vief5"]
+atlas = ExtResource("1_imeh4")
+region = Rect2(0, 0, 17, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pjjwc"]
+atlas = ExtResource("1_imeh4")
+region = Rect2(17, 0, 17, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ru4q4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vief5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pjjwc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="FKey" type="AnimatedSprite2D"]
+position = Vector2(240, 135)
+sprite_frames = SubResource("SpriteFrames_ru4q4")
+script = ExtResource("2_vief5")
+key_letter = "H"

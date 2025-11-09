@@ -4,8 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://cem2fxmo5dy18" path="res://actors/Player/player.tscn" id="2_ri5ef"]
 [ext_resource type="PackedScene" uid="uid://dbbvt75di0otw" path="res://Objects/tree1.tscn" id="3_h1nkr"]
 [ext_resource type="PackedScene" uid="uid://6iyrnbkqif3k" path="res://Objects/tree2.tscn" id="3_xs64d"]
-[ext_resource type="PackedScene" path="res://Animals/crab.tscn" id="5_nph40"]
-[ext_resource type="PackedScene" path="res://Animals/flamingo1.tscn" id="6_cql04"]
+[ext_resource type="PackedScene" uid="uid://bqy4blkjt51a4" path="res://Animals/crab.tscn" id="5_nph40"]
+[ext_resource type="PackedScene" uid="uid://b3l4iich5bw2i" path="res://Animals/flamingo1.tscn" id="6_cql04"]
 [ext_resource type="PackedScene" uid="uid://ctc28vynjlot7" path="res://ui/powerbar.tscn" id="7_8p7s7"]
 [ext_resource type="PackedScene" uid="uid://qkaj4nyapwjp" path="res://devScene/FishingRodItem.tscn" id="8_b1vk7"]
 
