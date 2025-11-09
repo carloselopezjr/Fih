@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bqy4blkjt51a4"]
+[gd_scene load_steps=6 format=3 uid="uid://bqe1dj6dwa3wy"]
 
 [ext_resource type="Script" uid="uid://cyv3130f0e1hf" path="res://Animals/crab.gd" id="1_235a1"]
 [ext_resource type="Texture2D" uid="uid://bqna0bwjwrfs8" path="res://Animals/Crabs.png" id="1_ppb61"]

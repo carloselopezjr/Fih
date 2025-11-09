@@ -1,22 +1,14 @@
-[gd_scene load_steps=7 format=3 uid="uid://dvsgb8y0ih7xq"]
+[gd_scene load_steps=5 format=3 uid="uid://bvqlqa3idl4ws"]
 
-[ext_resource type="Texture2D" uid="uid://dlci2tat0ams" path="res://Animals/Flamingo.png" id="1_l422s"]
+[ext_resource type="Texture2D" uid="uid://dlci2tat0ams" path="res://Animals/Flamingo.png" id="1_85bnq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_57lwx"]
-atlas = ExtResource("1_l422s")
+atlas = ExtResource("1_85bnq")
 region = Rect2(90, 0, 45, 45)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kaucr"]
-atlas = ExtResource("1_l422s")
+atlas = ExtResource("1_85bnq")
 region = Rect2(135, 0, 45, 45)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6me7a"]
-atlas = ExtResource("1_l422s")
-region = Rect2(225, 0, 45, 45)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_w8wjo"]
-atlas = ExtResource("1_l422s")
-region = Rect2(180, 0, 45, 45)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1d8rb"]
 animations = [{
@@ -43,30 +35,6 @@ animations = [{
 "texture": SubResource("AtlasTexture_57lwx")
 }, {
 "duration": 2.0,
-"texture": SubResource("AtlasTexture_6me7a")
-}, {
-"duration": 2.0,
-"texture": SubResource("AtlasTexture_w8wjo")
-}, {
-"duration": 2.0,
-"texture": SubResource("AtlasTexture_6me7a")
-}, {
-"duration": 2.0,
-"texture": SubResource("AtlasTexture_w8wjo")
-}, {
-"duration": 2.0,
-"texture": SubResource("AtlasTexture_6me7a")
-}, {
-"duration": 2.0,
-"texture": SubResource("AtlasTexture_6me7a")
-}, {
-"duration": 2.0,
-"texture": SubResource("AtlasTexture_w8wjo")
-}, {
-"duration": 2.0,
-"texture": SubResource("AtlasTexture_57lwx")
-}, {
-"duration": 2.0,
 "texture": SubResource("AtlasTexture_kaucr")
 }],
 "loop": true,
@@ -80,4 +48,4 @@ animations = [{
 position = Vector2(237, 137)
 sprite_frames = SubResource("SpriteFrames_1d8rb")
 autoplay = "default"
-frame_progress = 0.9158551
+frame_progress = 0.2555683
