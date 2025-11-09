@@ -1,7 +1,8 @@
-[gd_scene load_steps=26 format=3 uid="uid://cem2fxmo5dy18"]
+[gd_scene load_steps=27 format=3 uid="uid://cem2fxmo5dy18"]
 
 [ext_resource type="Script" uid="uid://bt76b2j3l3tlo" path="res://actors/Player/player.gd" id="1_5l0d5"]
 [ext_resource type="Texture2D" uid="uid://cmdr73w45hqtm" path="res://actors/Player/Adrien.png" id="2_5fuia"]
+[ext_resource type="Texture2D" uid="uid://calyjc3tkk4vl" path="res://Objects/rod.png" id="3_5fuia"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5l0d5"]
 atlas = ExtResource("2_5fuia")
@@ -214,3 +215,8 @@ limit_bottom = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
 position = Vector2(0, 2)
 shape = SubResource("CircleShape2D_5l0d5")
+
+[node name="FishingRodSprite" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(15, -1)
+texture = ExtResource("3_5fuia")

@@ -3,7 +3,26 @@ extends CharacterBody2D
 @export var speed: float = 95 # can also just use := like var speed := 130
 @onready var anim := $AnimatedSprite2D
 @onready var interact_area: Area2D = $InteractionArea
+@onready var rod_sprite: Sprite2D = $FishingRodSprite
 
+func show_rod() -> void:
+	if rod_sprite == null:
+		return
+	rod_sprite.visible = true
+	_update_rod_position()
+
+func hide_rod() -> void:
+	if rod_sprite == null:
+		return
+	rod_sprite.visible = false
+
+func _update_rod_position() -> void:
+	print("hello")
+	if rod_sprite == null:
+		return
+	# FOR POSITIONING, TWEAK HERE:
+	rod_sprite.position = Vector2(12, 0)
+	
 
 # Items stored in dictionary to store unique item IDs and count
 var inventory: Dictionary = {} 
@@ -111,3 +130,4 @@ func _update_anim():
 		anim.play("walk_%s" % last_facing)
 	else:
 		anim.play("idle_%s" % last_facing)
+		_update_rod_position()

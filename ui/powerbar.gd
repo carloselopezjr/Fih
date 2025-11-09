@@ -2,6 +2,10 @@ extends AnimatedSprite2D
 
 @export var max_charge_time := 2.5
 @export var input_action := "cast"
+@export var player: Node # This will be assigned in the editor
+@export var barUI_offset := Vector2(16, -26)
+
+
 
 var charging := false
 var charge := 0.0
@@ -11,9 +15,21 @@ func _ready():
 	frame = 0
 
 func _process(delta):
+	visible = false
+	global_position = player.global_position + barUI_offset
+	# Require fishing rod in inventory
+	if player.select_item_id != "fishing_rod":
+		charging = false
+		charge = 0.0
+		frame = 0
+		player.hide_rod()
+		return
+	
 	if Input.is_action_pressed(input_action):
 		# start or continue charging
 		charging = true
+		visible = true
+		player.show_rod()
 		if charge < max_charge_time:
 			charge += delta
 			_update_bar()
@@ -26,6 +42,8 @@ func _process(delta):
 		charge = 0.0
 		charging = false
 		frame = 0
+		visible = false
+		player.hide_rod()
 
 func _update_bar():
 	var total_frames := sprite_frames.get_frame_count(animation)
@@ -42,6 +60,8 @@ func _zone_from_charge(t: float) -> int:
 		return 3
 
 func perform_cast(zone: int):
+	
+	# MATCH CASE LIKE A SWITCH CASE
 	match zone:
 		1:
 			print("🎣 Cast landed close to shore!")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://b2fhfdifyegic"]
+[gd_scene load_steps=9 format=3 uid="uid://b2fhfdifyegic"]
 
 [ext_resource type="TileSet" uid="uid://bap62vu8qo3u5" path="res://Tilesets/beach_tileset.tres" id="1_ca00n"]
 [ext_resource type="PackedScene" uid="uid://cem2fxmo5dy18" path="res://actors/Player/player.tscn" id="2_ri5ef"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://6iyrnbkqif3k" path="res://Objects/tree2.tscn" id="3_xs64d"]
 [ext_resource type="PackedScene" path="res://Animals/crab.tscn" id="5_nph40"]
 [ext_resource type="PackedScene" path="res://Animals/flamingo1.tscn" id="6_cql04"]
+[ext_resource type="PackedScene" uid="uid://ctc28vynjlot7" path="res://ui/powerbar.tscn" id="7_8p7s7"]
+[ext_resource type="PackedScene" uid="uid://qkaj4nyapwjp" path="res://devScene/FishingRodItem.tscn" id="8_b1vk7"]
 
 [node name="fishingarea" type="Node2D"]
 position = Vector2(11, 0)
@@ -91,3 +93,14 @@ position = Vector2(80, -116)
 
 [node name="tree19" parent="." instance=ExtResource("3_xs64d")]
 position = Vector2(224, -70)
+
+[node name="powerbar" parent="." instance=ExtResource("7_8p7s7")]
+position = Vector2(267, 24)
+
+[node name="AnimatedSprite2D" parent="powerbar" index="0" node_paths=PackedStringArray("player")]
+player = NodePath("../../CharacterBody2D")
+
+[node name="PickupItem" parent="." instance=ExtResource("8_b1vk7")]
+position = Vector2(60, 9)
+
+[editable path="powerbar"]
