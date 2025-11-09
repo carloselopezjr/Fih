@@ -34,6 +34,7 @@ texture = ExtResource("1_eo4n4")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tubct"]
 texture = ExtResource("2_ifip1")
+1:1/animation_speed = 3.0
 1:1/0 = 0
 1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-0.5395756, -1.2590103, 8, -3.057598, 8, 8, -2.6978807, 8)
 2:1/0 = 0

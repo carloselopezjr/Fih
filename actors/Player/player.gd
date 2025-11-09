@@ -17,7 +17,6 @@ func hide_rod() -> void:
 	rod_sprite.visible = false
 
 func _update_rod_position() -> void:
-	print("hello")
 	if rod_sprite == null:
 		return
 	# FOR POSITIONING, TWEAK HERE:

@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://bmjr1om2pluw3"]
+
+[ext_resource type="Script" uid="uid://cyv3130f0e1hf" path="res://Animals/crab.gd" id="1_aatu0"]
+[ext_resource type="Texture2D" uid="uid://bqna0bwjwrfs8" path="res://Animals/Crabs.png" id="2_ys3xp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ewuba"]
+atlas = ExtResource("2_ys3xp")
+region = Rect2(0, 108, 48, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kd8co"]
+atlas = ExtResource("2_ys3xp")
+region = Rect2(48, 108, 48, 36)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bphyu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ewuba")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kd8co")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Crab" type="Node2D"]
+position = Vector2(191, -92)
+script = ExtResource("1_aatu0")
+speed = 8
+distance = 6
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(232, 122)
+sprite_frames = SubResource("SpriteFrames_bphyu")
+autoplay = "default"
+frame_progress = 0.92888856
